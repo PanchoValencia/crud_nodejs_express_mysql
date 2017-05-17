@@ -1,0 +1,74 @@
+.bootstrap{
+    display          : flex;
+    align-items      : center;
+    flex-direction   : column;
+    background-color : $bgc-claro; 
+
+    .wrap{
+        display         : flex;
+        align-items     : center;
+        flex-direction  : column;
+        justify-content : space-around;
+        width           : 100%;
+        padding         : 50px 5px;
+    }
+
+    &__container .wrap:nth-child(odd){
+        background-color : darken($bgc-claro, 5);
+    }
+
+    &__container{
+        display        : flex;
+        align-items    : center;
+        flex-direction : column;
+        width          : 100%;
+        margin         : 50px 0;
+
+        &-desc:not(:first-child){
+            margin-top : 50px;
+        }
+        &-desc{
+            display     : flex;
+            align-items : center;
+
+            &_h3{
+                color         : $theme-color;
+                font-size     : 1.2em;
+                margin-bottom : 50px;
+                border-bottom : 1px solid darken($bgc-oscuro, 30);
+                padding       : 0 10px;
+            }
+        }
+
+        &-buttonClass{
+            display         : flex;
+            align-items     : center;
+            justify-content : space-around;
+            width           : 80%;
+        }
+
+        &-buttonSize{
+            display         : flex;
+            align-items     : center;
+            justify-content : space-around;
+            width           : 40%;
+        }
+
+        &-buttonBlock{
+            display        : flex;
+            align-items    : center;
+            flex-direction : column;
+            width          : 20%;
+            &-bl{
+                width : 100%;
+            }
+        }
+
+        &-buttonActDis{
+            display         : flex;
+            align-items     : center;
+            justify-content : space-around;
+            width           : 30%;
+        }
+    }
+}

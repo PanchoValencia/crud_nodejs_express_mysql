@@ -1,0 +1,66 @@
+.center{
+    width           : 1150px;
+    max-width       : 1400px;
+    display         : flex;
+    flex-direction  : column;
+    justify-content : center;
+
+    .title{
+        display         : flex;
+        align-items     : center;
+        flex-direction  : column;
+        justify-content : flex-end;
+        height          : 30vh;
+
+        &-container{
+            display         : flex;
+            align-items     : center;
+            flex-direction  : column;
+            justify-content : center;
+
+            h2{
+                font-weight : 700;
+                font-size   : 2em;
+                color       : $theme-color;
+            }
+            .desc{
+                width      : 600px;
+                text-align : center;
+                color      : #374760;
+                padding    : 15px 0;
+            }
+            .underline{
+                width            : 90px;
+                background-color : $theme-color;
+                height           : 5px;
+                border-radius    : 2.5px;
+            }
+        }
+    }
+
+    .button-container{
+        display         : flex;
+        align-items     : center;
+        flex-direction  : column;
+        justify-content : center;
+        height          : 10vh;
+
+        .button{
+            background-color : $theme-color;
+            padding          : 5px 40px;
+            border-radius    : 20px;
+            color            : #bebebe;
+            text-align       : center;
+            font-size        : 1.2em;
+            &:hover{
+                cursor           : pointer;
+            }
+        }
+    }
+
+}
+
+.selected{
+    border-bottom : 2px solid lighten($text-color, 50);
+    color         : lighten($text-color, 50);
+}

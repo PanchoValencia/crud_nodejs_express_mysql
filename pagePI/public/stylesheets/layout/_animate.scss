@@ -1,0 +1,110 @@
+.animate{
+    display          : flex;
+    align-items      : center;
+    flex-direction   : column;
+    background-color : $bgc-claro;
+
+    &__wrap{
+        display         : flex;
+        align-items     : center;
+        flex-direction  : column;
+        justify-content : center;
+        margin          : 50px 0;
+
+        &-container{
+            display         : flex;
+            flex-direction  : column;
+            align-items     : center;
+            justify-content : center;
+
+            &__animation{
+                display         : flex;
+                align-items     : center;
+                flex-direction  : column;
+                justify-content : space-between;
+
+                &-img{
+                    display         : flex;
+                    align-items     : center;
+                    flex-direction  : column;
+                    justify-content : center;
+                    width           : 300px;
+                    height          : 300px;
+                }
+
+                &-opts{
+                    margin   : 30px 0;
+                    width    : 50%;
+                    position : relative;
+
+                    button{
+                        &:after{
+                            content       : "";
+                            display       : inline-block;
+                            position      : absolute;
+                            border-top    : 6px solid transparent;
+                            border-right  : 6px solid transparent;
+                            border-bottom : 6px solid transparent;
+                            border-left   : 6px solid lighten(black, 30);
+                            right         : 0;
+                            top           : calc(100%/2 - 6px);
+                        }
+                    }
+
+                    .menu{
+                        position         : absolute;
+                        display          : flex;
+                        align-items      : center;
+                        flex-direction   : column;
+                        justify-content  : center;
+                        background-color : $bgc-oscuro;
+                        padding          : 10px 0px 10px 10px;
+                        border           : 1px solid darken($bgc-oscuro, 10);
+                        border-radius    : 7px;
+                        right            : -200px;
+                        bottom           : 0;
+                        height           : 300px;
+
+                        &-list{
+                            overflow-y : scroll;
+
+                            &__head{
+                                font-size     : 1em;
+                                padding       : 10px 0px 0px 0px;
+                                margin-right  : 10px;
+                                color         : $theme-color;
+                                border-bottom : 1px solid darken($bgc-oscuro,40);
+                            }
+                            &__item{
+                                padding : 5px 0;
+
+                                &-a{
+                                    margin-left : 5px;
+                                    color       : $text-color;
+
+                                    &:hover{
+                                        text-decoration : none;
+                                        color           : darken($text-color, 80);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-desc{
+                    display         : flex;
+                    align-items     : center;
+                    flex-direction  : column;
+                    justify-content : center;
+                    width           : 50%;
+                    &-txt{
+                        font-size  : 1em;
+                        text-align : center;
+                        color      : darken(magenta, 10);
+                    }
+                }
+            }
+        }
+    }
+}

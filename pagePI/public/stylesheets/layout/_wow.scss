@@ -1,0 +1,46 @@
+.jswow{
+    height           : 190vh;
+    display          : flex;
+    align-items      : center;
+    flex-direction   : column;
+    background-color : $bgc-claro;
+
+    &-images{
+        display         : flex;
+        align-items     : center;
+        justify-content : space-between;
+        height          : 150vh;
+
+        &__container{
+            display         : flex;
+            align-items     : center;
+            flex-direction  : column;
+            justify-content : space-between;
+            height          : 70%;
+            width           : 45%;
+
+            &-p{
+                font-size : 4em;
+                font-family : Segoe UI Light;
+            }
+            #a{
+                color : #26A808;
+            }
+            #b{
+                color : #08A7A8;
+            }
+            #c{
+                color : #E3E31B;
+            }
+            #d{
+                color : #A8108E;
+            }
+            #e{
+                color : #A81308;
+            }
+            #f{
+                color : #63E397;
+            }
+        }
+    }
+}

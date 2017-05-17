@@ -1,0 +1,29 @@
+.container{
+    width           : 100%;
+    position        : absolute;
+    display         : flex;
+    align-items     : flex-end;
+    flex-direction  : column;
+    justify-content : center;
+    z-index         : 300 !important;
+
+    &-icon{
+        background-color : $theme-color;
+        width            : 35px;
+        height           : 35px;
+        border-radius    : 17.5px;
+        display          : flex;
+        align-items      : center;
+        flex-direction   : column;
+        justify-content  : center;
+        margin-right     : 5px;
+
+        &__up{
+            font-size : 30px;
+            color     : white;
+            &:hover{
+                cursor : pointer;
+            }
+        }
+    }
+}

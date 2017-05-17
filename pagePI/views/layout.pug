@@ -1,0 +1,39 @@
+mixin pic(name, ext)
+    picture.pic
+        //-source(srcset=`images/webp/${name}.webp`, type="image/webp")
+        img(src=`/images/${name}.${ext}`)
+doctype html
+html
+  head
+    title= titulo
+    link(rel="stylesheet" href="/node_modules/animate.css/animate.min.css")
+    link(rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.carousel.min.css")
+    link(rel="stylesheet" href="/node_modules/owl.carousel/dist/assets/owl.theme.min.css")
+    link(rel="stylesheet" href="/node_modules/magnific-popup/dist/magnific-popup.css")
+    link(rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css")
+    link(rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css")
+    link(rel='stylesheet' type='text/css' href='/stylesheets/style.css')
+    
+  body
+    block content
+        
+        
+        
+    script(src="/node_modules/jquery/dist/jquery.min.js")
+    script(src="/node_modules/jquery-sticky/jquery.sticky.js")
+    script(src="/node_modules/jquery-inview/jquery.inview.min.js")
+    script(src="/node_modules/wow.js/dist/wow.min.js")
+    script(src="/node_modules/owl.carousel/dist/owl.carousel.min.js")
+    script(src="/node_modules/magnific-popup/dist/jquery.magnific-popup.min.js")
+    script(src="/node_modules/bootstrap/dist/js/bootstrap.min.js")
+    script(src="/node_modules/jquery-countto/jquery.countTo.js")
+    script(src="/javascripts/index.js")
+    script(src="/javascripts/_color-theme.js")
+    script(src="/javascripts/navBar.js")
+    script(src="/javascripts/sticky.js")
+    script(src="/javascripts/wow.js")
+    script(src="/javascripts/carousel.js")
+    script(src="/javascripts/magnific-popup.js")
+    script(src="/javascripts/scroll-page.js")
+    script(src="/javascripts/countTo.js")
+    script(src="/javascripts/animate.js")

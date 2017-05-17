@@ -1,0 +1,31 @@
+.copyright{
+    background-color : lighten($bgc-intro, 2);
+    display          : flex;
+    align-items      : center;
+    flex-direction   : column;
+
+    &__wrap{
+        display         : flex;
+        align-items     : center;
+        justify-content : space-between;
+
+        &-cont{
+            height          : 50px;
+            display         : flex;
+            align-items     : center;
+            flex-direction  : column;
+            justify-content : center;
+
+            &_logo{
+                color                     : $theme-color;
+                border                    : 1px solid $theme-color;
+                border-bottom-left-radius : 5px;
+                border-top-right-radius   : 5px;
+                padding                   : 3px 10px;
+                font-size                 : .8em;
+                font-weight               : 700;
+
+            }
+        }
+    }
+}

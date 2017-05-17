@@ -1,0 +1,91 @@
+.form{
+    display          : flex;
+    align-items      : center;
+    flex-direction   : column;
+    justify-content  : space-around;
+    background-color : $bgc-claro;
+    border-radius    : 10px;
+    width            : 600px;
+    height           : 250px;
+    margin-left      : calc(50% - 300px);
+
+    i{
+        align-self : flex-end;
+        margin     : 20px 20px 0 0;
+        font-size  : 20px;
+        color      : $theme-color;
+        &:hover{
+            cursor : pointer;
+        }
+    }
+
+    #back{
+        align-self : flex-start;
+        margin     : 20px 0 0 20px;
+    }
+
+    &__h3{
+        height          : 50px;
+        font-size       : 1.5em;
+        display         : flex;
+        align-items     : center;
+        flex-direction  : column;
+        justify-content : center;
+        color           : $theme-color;
+    }
+
+    &__field{
+        height          : 180px;
+        display         : flex;
+        align-items     : center;
+        flex-direction  : column;
+        justify-content : center;
+
+        &-ol{
+            height          : 100%;
+            display         : flex;
+            align-items     : flex-start;
+            flex-direction  : column;
+            justify-content : space-around;
+
+            li{
+                display         : flex;
+                align-items     : center;
+                justify-content : space-between;
+                width           : 300px;
+
+                label{
+                    width           : 30%;
+                    display         : flex;
+                    justify-content : flex-end;
+                    color           : $theme-color;
+                    font-size       : 1em;
+                }
+                input{
+                    width     : 65%;
+                    color     : $theme-color;
+                    padding   : 5px;
+                    font-size : .9em;
+                }
+
+                button{
+                    border-style     : none;
+                    background-color : $theme-color;
+                    padding          : 10px 30px;
+                    border-radius    : 18px;
+                    color            : #bebebe;
+                    text-align       : center;
+                    font-size        : 1em;
+
+                    &:hover{
+                        cursor : pointer;
+                    }
+                }
+            }
+            li:last-child{
+                display         : flex;
+                justify-content : center;
+            }
+        }
+    }
+}

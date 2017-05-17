@@ -1,0 +1,16 @@
+picture, img{
+    height     : 100%;
+    max-height : $max-height;
+    width      : 100%;
+    max-width  : $max-width;
+}
+
+body{
+    font-family : $ff;
+}
+
+p{
+    font-size   : $fz;
+    line-height : $interlineado;
+    color       : $text-color;
+}

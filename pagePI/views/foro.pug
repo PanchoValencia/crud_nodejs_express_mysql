@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+html(lang="es")
+head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+    link(rel='stylesheet' type='text/css' href='/stylesheets/style.css')
+    link(rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css")
+    link(rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js")
+    script(src="/node_modules/bootstrap/dist/js/bootstrap.min.js")
+    script(src="/node_modules/jquery/dist/jquery.min.js")
+    script(src="/javascripts/cerrarSesion.js")
+    title Programación en Internet
+
+    body
+        section.foro
+            div.center
+                div.foro-header
+                    div.foro-header__return
+                        a(href="http://localhost:3000/auth/logout" title="cerrar sesión").glyphicon.glyphicon-log-out
+                        p(class="usuarioLogeado")= user.nombre
+                        - var idUser = user.id;
+                        form(action='http://localhost:3000/adminComentarios' method='post')
+                            input(type='number' name='idUsuario' value=`${idUser}` hidden)
+                            button(type='submit' title="Administrar mis comentarios")#spin.fa.fa-spin.fa-cog
+                    div.foro-header__title
+                        h2.foro-header__title-h2 FORO
+                    div.copyright__wrap-cont
+                        p.copyright__wrap-cont_logo FD
+
+                div.foro-container
+
+                    div.foro-container__show
+                        - var cod = user.id;
+                        form( method="POST" action="http://localhost:3000/addComment" ).foro-container__show-txt
+                            input(type="number" name="idUser" hidden value=`${cod}`)
+                            textarea(placeholder="Comentario" name="coment" required)
+                            button(type="submit").foro-container__show-txt__send
+                                i#send.fa.fa-paper-plane
+                                    
+                        div.foro-container__show-wrap
+                            if comment.length
+                                - var i = 0;
+                                while i < comment.length
+                                    div.contenedor
+                                        h5.autor= comment[i].nombre_persona
+                                        p.comment= comment[i].comentario
+                                        p.fecha= comment[i].fecha
+                                        - i ++;
+                            else
+                                div.alert.alert-info
+                                    a(class="close" data-dismiss="alert" aria-label="close") ×
+                                    b Foro vacío
+                                        p.alert-info Crea el primer comentario..
+
+                    div.foro-container__comment
+                        ul.foro-container__comment-ul
+                            li Enlaces externos
+                            li
+                                a(href="http://mynameismatthieu.com/WOW/") Wow.js
+                            li
+                                a(href="https://owlcarousel2.github.io/OwlCarousel2/") Owl-carousel
+                            li
+                                a(href="http://dimsemenov.com/plugins/magnific-popup/") Magnific-popup
+                            li
+                                a(href="https://jquery.com") JQuery
+                            li
+                                a(href="http://getbootstrap.com/") Bootstrap
+                            li
+                                a(href="https://github.com/mhuggins/jquery-countTo") CountTo
+                            li
+                                a(href="https://daneden.github.io/animate.css/") Animate.css

@@ -1,0 +1,53 @@
+.count{
+    display          : flex;
+    align-items      : center;
+    flex-direction   : column;
+    background-color : $bgc-oscuro;
+    border-bottom    : 1px solid darken($bgc-oscuro, 10);
+    border-top       : 1px solid darken($bgc-oscuro, 10);
+
+    &-wrap{
+        display         : flex;
+        align-items     : center;
+        flex-direction  : column;
+        justify-content : center;
+        width           : 100%;
+        margin          : 50px 0;
+
+        &__container{
+            display          : flex;
+            align-items      : center;
+            flex-direction   : column;
+            justify-content  : space-around;
+            background-color : $bgc-intro;
+            border-radius    : 10px;
+            width            : 35%;
+            height           : 400px;
+
+            &-pharams{
+                height : 35%;
+
+                #iniciar{
+                    color            : $bgc-claro;
+                    background-color : $theme-color;
+                    padding          : 5px 10px;
+                    border-radius    : 20px;
+                    font-size        : 1em;
+                    cursor           : pointer;
+                    margin-top       : 40px;
+                }
+            }
+            &-num{
+                height          : 55%;
+                display         : flex;
+                align-items     : center;
+                justify-content : space-between;
+
+                &__p{
+                    color     : $theme-color;
+                    font-size : 10em;
+                }
+            }
+        }
+    }
+}

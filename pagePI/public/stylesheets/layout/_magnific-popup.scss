@@ -1,0 +1,62 @@
+.mgpop{
+    display          : flex;
+    align-items      : center;
+    flex-direction   : column;
+    background-color : $bgc-claro;
+
+    &-wrap{
+        display         : flex;
+        align-items     : center;
+        flex-direction  : column;
+        justify-content : center;
+
+        &__gallery{
+            display         : flex;
+            align-items     : center;
+            justify-content : space-between;
+            height          : 100vh;
+            width           : 100%;
+
+            &-text{
+                display         : flex;
+                align-items     : center;
+                flex-direction  : column;
+                justify-content : space-between;
+                height          : 450px;
+                width           : 35%;
+
+                &-container{
+                    text-align : center;
+                }
+            }
+
+            &-img{
+                width           : 60%;
+                height          : 100%;
+                display         : flex;
+                align-items     : center;
+                flex-direction  : column;
+                justify-content : center;
+
+                table{
+                    width      : 600px;
+                    height     : 450px;
+                    box-shadow : -8px -8px 8px gray;
+                    tr{
+                        width  : 600px;
+                        height : 150px;
+                        td{
+                            width   : 200px;
+                            height  : 150px;
+                            opacity : .9;
+                            &:hover{
+                                cursor  :zoom-in;
+                                opacity : 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

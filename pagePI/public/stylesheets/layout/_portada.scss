@@ -1,0 +1,46 @@
+.portada{
+    height           : 100vh;
+    display          : flex;
+    align-items      : center;
+    flex-direction   : column;
+    background-color : $bgc-intro;
+
+    &-container{
+        display         : flex;
+        align-items     : center;
+        flex-direction  : column;
+        justify-content : center;
+        height          : 100vh;
+
+        &-logo{
+            display                   : flex;
+            align-items               : center;
+            color                     : $theme-color;
+            border                    : 5px solid $theme-color;
+            border-bottom-left-radius : 15px;
+            border-top-right-radius   : 15px;
+            padding                   : 10px 30px;
+            font-size                 : 6em;
+            font-weight               : 700;
+        }
+
+        &-wrap{
+            display         : flex;
+            align-items     : center;
+            flex-direction  : column;
+            justify-content : space-between;
+            margin-top      : 50px;
+
+            &__h1{
+                color     :$theme-color;
+                font-size : 5em;
+            }
+
+            &__p{
+                font-size  : 1.5em;
+                text-align : center;
+                width      : 550px;
+            }
+        }
+    }
+}

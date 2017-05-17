@@ -1,0 +1,86 @@
+.footer{
+    display          : flex;
+    align-items      : center;
+    flex-direction   : column;
+    background-color : lighten($bgc-intro, 5);
+
+    &__wrap{
+        display         : flex;
+        justify-content : space-between;
+
+        &-container{
+            display         : flex;
+            align-items     : center;
+            flex-direction  : column;
+            justify-content : center;
+            width           : 25%;
+            height          : 60vh;
+            font-size       : 1em;
+
+            &-imgF{
+                width            : 180px;
+                height           : 180px;
+                background-image : url("/images/team-1.jpg");
+                background-size  : cover;
+                border-radius    : 90px;
+            }
+            &-imgD{
+                width            : 180px;
+                height           : 180px;
+                background-image : url("/images/team-2.jpg");
+                background-size  : cover;
+                border-radius    : 90px;
+            }
+            &-desc{
+                display        : flex;
+                align-items    : center;
+                flex-direction : column;
+                margin-top     : 20px;
+
+                &--p:not(:last-child){
+                    padding-bottom : 5px;
+                }
+                &--p{
+                    color     : lighten($text-color, 20);
+                    font-size : 1em;
+                }
+            }
+
+            &-about{
+                font-size     : 2em;
+                font-weight   : 700;
+                color         : lighten($text-color, 30);
+                margin-bottom : 30px;
+            }
+
+            &-txt{
+                text-align : justify;
+
+                &--p{
+                    color     : lighten($text-color, 20);
+                    font-size : 1em;
+                }
+            }
+
+            &-social{
+                display         : flex;
+                justify-content : space-between;
+                width           : 100%;
+                margin-top      : 50px;
+
+                &--h4{
+                    font-size : 1.1em;
+                    color     : lighten($text-color, 20);
+                }
+                i{
+                    color     : lighten($text-color, 20);
+                    font-size : 21px;
+                    &:hover{
+                        cursor : pointer;
+                        color  : lighten($text-color, 40);
+                    }
+                }
+            }
+        }
+    }
+}

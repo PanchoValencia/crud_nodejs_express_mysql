@@ -1,0 +1,829 @@
+extends layout
+
+block content
+    //- SECCION PORTADA
+    section#portada.portada
+        div.center
+            div.portada-container
+                div.portada-container-logo.wow.bounce
+                    span.portada-container-logo__span FD
+                div.portada-container-wrap
+                    h1.portada-container-wrap__h1.wow.rubberBand Frameworks to Developers
+                    p.portada-container-wrap__p.wow.zoomIn Aprende algunos de los frameworks y librerías más usadas de JavaScript y CSS.
+  
+  
+    //-NAVBAR
+    section.nav
+        div.center
+            div.nav-container
+                div(title="configurar color de tema").nav-container__opts
+                    i(title="Configurar color de tema")#rotate.fa.fa-cog.fa-spin.fa-3x.fa-fw
+                    div(hidden).nav-container__opts-color
+                        div.nav-container__opts-color__container
+                            div.nav-container__opts-color__container-name
+                                span(value="#4dc247").verde verde
+                                span(value="#35A3C6").azulCielo azul cielo
+                                span(value="#ff0084").rosa rosa
+                                span(value="#0274B3").azul azul
+                                span(value="#FFB000").amarillo amarillo
+                                span(value="#cb2027").default default
+                            div.nav-container__opts-color__container-color
+                                span#verde
+                                span#azulCielo
+                                span#rosa
+                                span#azul
+                                span#amarillo
+                                span#default
+                div#nav.nav-container__items
+                    p(href="#wow" ).nav-container__items-p Wow.js
+                    p(href="#owl" ).nav-container__items-p Owl-carousel
+                    p(href="#popup" ).nav-container__items-p Magnific-popup
+                    p(href="#jquery" ).nav-container__items-p JQuery
+                    p(href="#bootstrap" ).nav-container__items-p Bootstrap
+                    p(href="#countTo" ).nav-container__items-p CountTo
+                    p(href="#animate" ).nav-container__items-p Animate.css
+                    p(href="#faq" ).nav-container__items-p FAQ
+  
+  
+    //-WOW.JS
+    section#wow.jswow
+        div.center
+            div.title.wow.rubberBand
+                div.title-container
+                    h2 Wow.js
+                    p.desc Es un plugin de JavaScript que revela animaciones al desplazarse. Personaliza fácilmentre los ajustes de animación: estilo, retardo, longitud, desplazamiento, iteraciones...
+                    span.underline
+            div.jswow-images
+                div.jswow-images__container
+                    p#a(data-wow-duration="2s").jswow-images__container-p.wow.hinge hinge
+                    p#b.jswow-images__container-p.wow.flip flip
+                    p#c(data-wow-duration="2s").jswow-images__container-p.wow.slideInLeft slideInLeft
+                div.jswow-images__container
+                    p#d(data-wow-duration="1s" data-wow-iteration="2").jswow-images__container-p.wow.rubberBand rubberBand
+                    p#e(data-wow-iteration="3" data-wow-duration="1s").jswow-images__container-p.wow.bounce bounce
+                    p#f(data-wow-iteration="2").jswow-images__container-p.wow.swing swing
+            div(href="#test-form-wow").popup-with-form.button-container
+                p.button.wow.pulse Iniciar
+  
+            form(method="POST" action="http://localhost:3000/auth/signin")#test-form-wow.mfp-hide.form
+                i(title="agregar usuario" href="#addUserWow").popup-with-form.fa.fa-user-plus.theme
+                h3.form__h3.theme Wow.js
+                fieldset.form__field
+                    ol.form__field-ol
+                        li
+                            label(for="username").theme usuario:
+                            input(name="username" type="text" placeholder="mi_usuario" required autocomplete="off")#name.theme
+                        li
+                            label(for="password").theme contraseña:
+                            input(name="password" type="password" placeholder="mi_password" required autocomplete="off")#password.theme
+                        li
+                            button(type="submit").btn-form Entrar
+  
+            form(method="POST" action="http://localhost:3000/index")#addUserWow.mfp-hide.form
+                i(title="regresar" href="#test-form-wow")#back.popup-with-form.fa.fa-arrow-left.theme
+                h3.form__h3.theme Nuevo Usuario
+                fieldset.form__field
+                    ol.form__field-ol
+                        li
+                            label(for="user").theme usuario:
+                            input(name="new_user" type="text" placeholder="mi_usuario" required autocomplete="off" title="nombre de usuario(máximo 20 caracteres)")#name.theme
+                        li
+                            label(for="password").theme contraseña:
+                            input(name="new_password" type="password" placeholder="mi_password" required autocomplete="off" title="contraseña(máximo 10 caracteres)")#password.theme
+                        li
+                            button(type="submit").btn-form Guardar
+                            
+  
+  
+    //-BOTON-UP
+    div.container
+        div.container-icon
+            i(href="#portada" title="click para ir a parte superior").fa.fa-arrow-circle-up.container-icon__up
+  
+  
+    //-OWL.CAROUSEL
+    section#owl.carousel
+        div.center
+            div.title.wow.rubberBand
+                div.title-container
+                    h2 Owl.carousel
+                    p.desc Es un plugin de JQuery que nos permite tener un hermoso carrusel responsivo.
+                    span.underline
+  
+            div.carousel-wrap.owl-carousel.owl-theme.owl-loaded
+                div.carousel-wrap__container
+                    div.carousel-wrap__container-pic
+                        +pic("img1","jpg")
+                div.carousel-wrap__container
+                    div.carousel-wrap__container-pic
+                        +pic("ironhide","jpg")
+                div.carousel-wrap__container
+                    div.carousel-wrap__container-pic
+                        +pic("img2","jpg")
+                div.carousel-wrap__container
+                    div.carousel-wrap__container-pic
+                        +pic("maxresdefault","jpg")
+                div.carousel-wrap__container
+                    div.carousel-wrap__container-pic
+                        +pic("img3","jpg")
+                div.carousel-wrap__container
+                    div.carousel-wrap__container-pic
+                        +pic("webprogramming","jpg")
+                div.carousel-wrap__container
+                    div.carousel-wrap__container-pic
+                        +pic("img4","jpg")
+  
+            div.carousel-cont.owl-controls
+                div.carousel-cont__container.owl-nav
+                    p.prev.owl-prev anterior
+                    p.next.owl-next siguiente
+            div(href="#test-form-owl").popup-with-form.button-container
+                p.button.wow.pulse Iniciar
+  
+            form(method="POST" action="http://localhost:3000/auth/signin")#test-form-owl.mfp-hide.form
+                i(title="agregar usuario" href="#addUserOwl").popup-with-form.fa.fa-user-plus.theme
+                h3.form__h3.theme Owl-carousel
+                fieldset.form__field
+                    ol.form__field-ol
+                        li
+                            label(for="username").theme usuario:
+                            input(name="username" type="text" placeholder="mi_usuario" required autocomplete="off")#name.theme
+                        li
+                            label(for="password").theme contraseña:
+                            input(name="password" type="password" placeholder="mi_password" required autocomplete="off")#password.theme
+                        li
+                            button(type="submit").btn-form Entrar
+  
+            form(method="POST" action="http://localhost:3000/index")#addUserOwl.mfp-hide.form
+                i(title="regresar" href="#test-form-owl")#back.popup-with-form.fa.fa-arrow-left.theme
+                h3.form__h3.theme Nuevo Usuario
+                fieldset.form__field
+                    ol.form__field-ol
+                        li
+                            label(for="user").theme usuario:
+                            input(name="new_user" type="text" placeholder="mi_usuario" required autocomplete="off" title="nombre de usuario(máximo 20 caracteres)")#name.theme
+                        li
+                            label(for="password").theme contraseña:
+                            input(name="new_password" type="password" placeholder="mi_password" required autocomplete="off" title="contraseña(máximo 10 caracteres)")#password.theme
+                        li
+                            button(type="submit").btn-form Guardar
+  
+  
+    //- MAGNIFIC-POPUP
+    section#popup.mgpop
+        div.center
+            div.mgpop-wrap
+                div.title.wow.rubberBand
+                    div.title-container
+                        h2 Magnific Popup
+                        p.desc Magnific Popup es un sistema de diálogos, popup (lightbox) responsive que está centrado en el rendimiento, adaptando el tamaño de las fotografías o ventanas automáticamente al tamaño del viewport.
+                        span.underline
+  
+                div.mgpop-wrap__gallery
+                    div.mgpop-wrap__gallery-text.wow.slideInLeft
+                        div.mgpop-wrap__gallery-text-container
+                            p.mgpop-wrap__gallery-text-container-p Selecciona una imágen de la galeria y experimenta la magia de "Magnific Popup"...
+                        div(href="#test-form-popup").popup-with-form.button-container
+                            p.button.wow.pulse Iniciar
+  
+                        form(method="POST" action="http://localhost:3000/auth/signin")#test-form-popup.mfp-hide.form
+                            i(title="agregar usuario" href="#addUserPopup").popup-with-form.fa.fa-user-plus.theme
+                            h3.form__h3.theme Magnific Popup
+                            fieldset.form__field
+                                ol.form__field-ol
+                                    li
+                                        label(for="username").theme usuario:
+                                        input(name="username" type="text" placeholder="mi_usuario" required autocomplete="off")#name.theme
+                                    li
+                                        label(for="password").theme contraseña:
+                                        input(name="password" type="password" placeholder="mi_password" required autocomplete="off")#password.theme
+                                    li
+                                        button(type="submit").btn-form Entrar
+  
+                        form(method="POST" action="http://localhost:3000/index")#addUserPopup.mfp-hide.form
+                            i(title="regresar" href="#test-form-popup")#back.popup-with-form.fa.fa-arrow-left.theme
+                            h3.form__h3.theme Nuevo Usuario
+                            fieldset.form__field
+                                ol.form__field-ol
+                                    li
+                                        label(for="user").theme usuario:
+                                        input(name="new_user" type="text" placeholder="mi_usuario" required autocomplete="off" title="nombre de usuario(máximo 20 caracteres)")#name.theme
+                                    li
+                                        label(for="password").theme contraseña:
+                                        input(name="new_password" type="password" placeholder="mi_password" required autocomplete="off" title="contraseña(máximo 10 caracteres)")#password.theme
+                                    li
+                                        button(type="submit").btn-form Guardar
+  
+                    div.mgpop-wrap__gallery-img.wow.slideInRight
+                        table
+                            tr
+                                td(data-mfp-src="../images/img1.jpg" title="Magnific Popup").magnific-popup
+                                    +pic("img1","jpg")
+                                td(data-mfp-src="../images/webprogramming.jpg" title="Magnific Popup").magnific-popup
+                                    +pic("webprogramming","jpg")
+                                td(data-mfp-src="../images/img3.jpg" title="Magnific Popup").magnific-popup
+                                    +pic("img3","jpg")
+                            tr
+                                td(data-mfp-src="../images/img4.jpg" title="Magnific Popup").magnific-popup
+                                    +pic("img4","jpg")
+                                td(data-mfp-src="../images/img2.jpg" title="Magnific Popup").magnific-popup
+                                    +pic("img2","jpg")
+                                td(data-mfp-src="../images/maxresdefault.jpg" title="Magnific Popup").magnific-popup
+                                    +pic("maxresdefault","jpg")
+                            tr
+                                td(data-mfp-src="../images/img1.jpg" title="Magnific Popup").magnific-popup
+                                    +pic("img1","jpg")
+                                td(data-mfp-src="../images/ironhide.jpg" title="Magnific Popup").magnific-popup
+                                    +pic("ironhide","jpg")
+                                td(data-mfp-src="../images/img3.jpg" title="Magnific Popup").magnific-popup
+                                    +pic("img3","jpg")
+  
+  
+    //-JQUERY
+    section#jquery.jquery
+        div.center
+            div.title.wow.rubberBand
+                div.title-container
+                    h2 JQuery
+                    p.desc Jquery es una librería inteligente, rápida y rica en características de JavaScript. Manipula el HTML con eventos y animaciones, y es compatible con una multitud de navegadores.
+                    span.underline
+  
+            div.jquery-wrap
+                div.jquery-wrap__containerL.wow.slideInLeft
+                    div.jquery-wrap__containerL-selectores
+                        h3.jquery-wrap__containerL-selectores-h3.theme Selectores
+                    div.jquery-wrap__containerL-item
+                        p.jquery-wrap__containerL-item-p Clases
+                        p.jquery-wrap__containerL-item-ejem $(".claseNombre").evento(...);
+                        span.jquery-wrap__containerL-item-desc Para usar el selector "className" se antecede con un punto seguido del nombre de la clase ej: $(".miClase")
+                    div.jquery-wrap__containerL-item
+                        p.jquery-wrap__containerL-item-p ID
+                        p.jquery-wrap__containerL-item-ejem $("#idNombre").evento(...);
+                        span.jquery-wrap__containerL-item-desc El selector "id" sólo basta con anteponer un "#" seguido del nombre del identificador ej: $("#miID")
+                    div.jquery-wrap__containerL-item
+                        p.jquery-wrap__containerL-item-p Etiquetas
+                        p.jquery-wrap__containerL-item-ejem $("nombreEtiqueta").evento(...);
+                        span.jquery-wrap__containerL-item-desc Para seleccionar por nombre de etiquetas solo hay que nombrar la etiqueta ej: $("p")
+                    div.jquery-wrap__containerL-item
+                        p.jquery-wrap__containerL-item-p Otros atributos
+                        p.jquery-wrap__containerL-item-ejem $("nombreAttr : valor").evento(...);
+                        span.jquery-wrap__containerL-item-desc Existen algunas otras alternativas de selectores, por ejemplo datas, pseudo-selectores, y algunos otros atributos...
+  
+                div.jquery-wrap__container.wow.slideInRight
+                    div.jquery-wrap__container-tit
+                        h3.jquery-wrap__container-tit-h3.theme Algunos eventos y efectos
+                    div.jquery-wrap__container-event
+                        p.jquery-wrap__container-event-p .click()
+                        p.jquery-wrap__container-event-ejem $("selector").click(function(){  ...  });
+                        span.jquery-wrap__container-event-desc El evento "click" se envía a un elemento cuando el puntero hace click dentro de dicho elemento. Cualquier elemento HTML puede recibir este evento...
+                    div.jquery-wrap__container-event
+                        p.jquery-wrap__container-event-p .hide()
+                        p.jquery-wrap__container-event-ejem $("selector").hide();
+                        span.jquery-wrap__container-event-desc El efecto "hide" puede ser consecuencia de un primer evento, por ejemplo despúes del click, mouseover, etc...
+                    div.jquery-wrap__container-event
+                        p.jquery-wrap__container-event-p .show()
+                        p.jquery-wrap__container-event-ejem $("selector").show();
+                        span.jquery-wrap__container-event-desc El efecto "show" puede ser consecuencia de un primer evento, por ejemplo despúes del click, mouseover, etc...
+                    div.jquery-wrap__container-event
+                        p.jquery-wrap__container-event-p .toggle()
+                        p.jquery-wrap__container-event-ejem $("selector").toggle();
+                        span.jquery-wrap__container-event-desc El efecto "toggle" es la combinación del hide y show, de igual manera es consecuencia de un primer evento..
+  
+            div(href="#test-form-jquery").popup-with-form.button-container
+                p.button.wow.pulse Iniciar
+  
+            form(method="POST" action="http://localhost:3000/auth/signin")#test-form-jquery.mfp-hide.form
+                i(title="agregar usuario" href="#addUserJquery").popup-with-form.fa.fa-user-plus.theme
+                h3.form__h3.theme JQuery
+                fieldset.form__field
+                    ol.form__field-ol
+                        li
+                            label(for="username").theme usuario:
+                            input(name="username" type="text" placeholder="mi_usuario" required autocomplete="off")#name.theme
+                        li
+                            label(for="password").theme contraseña:
+                            input(name="password" type="password" placeholder="mi_password" required autocomplete="off")#password.theme
+                        li
+                            button(type="submit").btn-form Entrar
+  
+            form(method="POST" action="http://localhost:3000/index")#addUserJquery.mfp-hide.form
+                i(title="regresar" href="#test-form-jquery")#back.popup-with-form.fa.fa-arrow-left.theme
+                h3.form__h3.theme Nuevo Usuario
+                fieldset.form__field
+                    ol.form__field-ol
+                        li
+                            label(for="user").theme usuario:
+                            input(name="new_user" type="text" placeholder="mi_usuario" required autocomplete="off" title="nombre de usuario(máximo 20 caracteres)")#name.theme
+                        li
+                            label(for="password").theme contraseña:
+                            input(name="new_password" type="password" placeholder="mi_password" required autocomplete="off" title="contraseña(máximo 10 caracteres)")#password.theme
+                        li
+                            button(type="submit").btn-form Guardar
+  
+  
+    //-BOOTSTRAP
+    section#bootstrap.bootstrap
+        div.center
+            div.title.wow.rubberBand
+                div.title-container
+                    h2 Bootstrap
+                    p.desc Bootstrap es el framework de HTML, CSS Y JavaScript más popular para desarrollo responsivo en sitios web y móviles.
+                    span.underline
+  
+            div.bootstrap__container
+                div(data-wow-duration="2s").wrap.wow.slideInLeft
+                    div.bootstrap__container-desc
+                        h3.bootstrap__container-desc_h3.theme Estilos de botones
+                    div.bootstrap__container-buttonClass
+                        div.bootstrap__container-buttonClass-bc
+                            button.btn.btn-danger Danger
+                        div.bootstrap__container-buttonClass-bc
+                            button.btn.btn-warning Warning
+                        div.bootstrap__container-buttonClass-bc
+                            button.btn.btn-info Info
+                        div.bootstrap__container-buttonClass-bc
+                            button.btn.btn-success Success
+                        div.bootstrap__container-buttonClass-bc
+                            button.btn.btn-default Default
+                        div.bootstrap__container-buttonClass-bc
+                            button.btn.btn-primary Primary
+                        div.bootstrap__container-buttonClass-bc
+                            button.btn.btn-link Link
+  
+                div(data-wow-duration="2s").wrap.wow.slideInRight
+                    div.bootstrap__container-desc
+                        h3.bootstrap__container-desc_h3.theme Tamaños de botones
+                    div.bootstrap__container-buttonSize
+                        div.bootstrap__container-buttonSize-bs
+                            button.btn.btn-primary.btn-xs XSmall
+                        div.bootstrap__container-buttonSize-bs
+                            button.btn.btn-primary.btn-sm Small
+                        div.bootstrap__container-buttonSize-bs
+                            button.btn.btn-primary.btn-md Medium
+                        div.bootstrap__container-buttonSize-bs
+                            button.btn.btn-primary.btn-lg Large
+  
+                div(data-wow-duration="2s").wrap.wow.slideInLeft
+                    div.bootstrap__container-desc
+                        h3.bootstrap__container-desc_h3.theme Botón a nivel del bloque
+                    div.bootstrap__container-buttonBlock
+                        div.bootstrap__container-buttonBlock-bl
+                            button.btn.btn-primary.btn-block Button1
+                        div.bootstrap__container-buttonBlock-bl
+                            button.btn.btn-default.btn-block Button2
+  
+                div(data-wow-duration="2s").wrap.wow.slideInRight
+                    div.bootstrap__container-desc
+                        h3.bootstrap__container-desc_h3.theme Botones Activo/Deshabilitado
+                    div.bootstrap__container-buttonActDis
+                        div.bootstrap__container-buttonActDis-bl
+                            button.btn.btn-success.active Active Button
+                        div.bootstrap__container-buttonActDis-bl
+                            button.btn.btn-success.disabled Disable Button
+  
+                div(data-wow-duration="2s").wrap.wow.slideInLeft
+                    div.bootstrap__container-desc
+                        h3.bootstrap__container-desc_h3.theme Ejemplo de formulario bootstrap
+                    div.bootstrap__container-form
+                        form.form-horizontal
+                            div.form-group
+                                label(for="email") e-mail:
+                                input(type="email")#email.form-control
+                            div.form-group
+                                label(for="pwd") contraseña:
+                                input(type="password")#pwd.form-control
+                            div.checkbox
+                                label
+                                    <input type="checkbox"> Recuérdame</input>
+                            button(type="button").btn.btn-default Enviar
+  
+            div(href="#test-form-bootstrap").popup-with-form.button-container
+                p.button.wow.pulse Iniciar
+  
+            form(method="POST" action="http://localhost:3000/auth/signin")#test-form-bootstrap.mfp-hide.form
+                i(title="agregar usuario" href="#addUserBootstrap").popup-with-form.fa.fa-user-plus.theme
+                h3.form__h3.theme Bootstrap
+                fieldset.form__field
+                    ol.form__field-ol
+                        li
+                            label(for="username").theme usuario:
+                            input(name="username" type="text" placeholder="mi_usuario" required autocomplete="off")#name.theme
+                        li
+                            label(for="password").theme contraseña:
+                            input(name="password" type="password" placeholder="mi_password" required autocomplete="off")#password.theme
+                        li
+                            button(type="submit").btn-form Entrar
+  
+            form(method="POST" action="http://localhost:3000/index")#addUserBootstrap.mfp-hide.form
+                i(title="regresar" href="#test-form-bootstrap")#back.popup-with-form.fa.fa-arrow-left.theme
+                h3.form__h3.theme Nuevo Usuario
+                fieldset.form__field
+                    ol.form__field-ol
+                        li
+                            label(for="user").theme usuario:
+                            input(name="new_user" type="text" placeholder="mi_usuario" required autocomplete="off" title="nombre de usuario(máximo 20 caracteres)")#name.theme
+                        li
+                            label(for="password").theme contraseña:
+                            input(name="new_password" type="password" placeholder="mi_password" required autocomplete="off" title="contraseña(máximo 10 caracteres)")#password.theme
+                        li
+                            button(type="submit").btn-form Guardar
+  
+  
+    //-COUNTTO
+    section#countTo.count
+        div.center
+            div.title.wow.rubberBand
+                div.title-container
+                    h2 CountTo
+                    p.desc CountTo es un plugin jQuery que cuenta hacia arriba (o hacia abajo) a un número de destino y a una velocidad especificada.
+                    span.underline
+  
+            div.count-wrap
+                div.count-wrap__container
+                    div.count-wrap__container-pharams
+                        p#iniciar Click para reiniciar el conteo
+                    div.count-wrap__container-num
+                        span.count-wrap__container-num__p.theme.counter 777
+  
+            div(href="#test-form-count").popup-with-form.button-container
+                p.button.wow.pulse Iniciar
+  
+            form(method="POST" action="http://localhost:3000/auth/signin")#test-form-count.mfp-hide.form
+                i(title="agregar usuario" href="#addUserCount").popup-with-form.fa.fa-user-plus.theme
+                h3.form__h3.theme CountTo
+                fieldset.form__field
+                    ol.form__field-ol
+                        li
+                            label(for="username").theme usuario:
+                            input(name="username" type="text" placeholder="mi_usuario" required autocomplete="off")#name.theme
+                        li
+                            label(for="password").theme contraseña:
+                            input(name="password" type="password" placeholder="mi_password" required autocomplete="off")#password.theme
+                        li
+                            button(type="submit").btn-form Entrar
+  
+            form(method="POST" action="http://localhost:3000/index")#addUserCount.mfp-hide.form
+                i(title="regresar" href="#test-form-count")#back.popup-with-form.fa.fa-arrow-left.theme
+                h3.form__h3.theme Nuevo Usuario
+                fieldset.form__field
+                    ol.form__field-ol
+                        li
+                            label(for="user").theme usuario:
+                            input(name="new_user" type="text" placeholder="mi_usuario" required autocomplete="off" title="nombre de usuario(máximo 20 caracteres)")#name.theme
+                        li
+                            label(for="password").theme contraseña:
+                            input(name="new_password" type="password" placeholder="mi_password" required autocomplete="off" title="contraseña(máximo 10 caracteres)")#password.theme
+                        li
+                            button(type="submit").btn-form Guardar
+  
+  
+    //-ANIMATE
+    section#animate.animate
+        div.center
+            div.title.wow.rubberBand
+                div.title-container
+                    h2 Animate.css
+                    p.desc Animate es una librería de CSS que con sólo agregar clases nos proporciona efectos de animaciones..
+                    span.underline
+  
+            div.animate__wrap
+                div.animate__wrap-container
+                    div.animate__wrap-container__animation
+                        div#animating.animate__wrap-container__animation-img.wow.animated
+                            +pic("emoji","png")
+  
+                        div.animate__wrap-container__animation-opts
+                            button(type="button")#animBot.btn.btn-default.btn-block Animate.css
+                            div#tog.menu
+                                ul.menu-list
+                                    li.menu-list__head.theme Bouncing Entrances
+                                    li.menu-list__item
+                                        a(href="bounceIn").menu-list__item-a bounceIn
+                                    li.menu-list__item
+                                        a(href="bounceInDown").menu-list__item-a bounceInDown
+                                    li.menu-list__item
+                                        a(href="bounceInLeft").menu-list__item-a bounceInLeft
+                                    li.menu-list__item
+                                        a(href="bounceInRight").menu-list__item-a bounceInRight
+                                    li.menu-list__item
+                                        a(href="bounceInUp").menu-list__item-a bounceInUp
+  
+                                    li.menu-list__head.theme Bouncing Exits
+                                    li.menu-list__item
+                                        a(href="bounceOut").menu-list__item-a bounceOut
+                                    li.menu-list__item
+                                        a(href="bounceOutDown").menu-list__item-a bounceOutDown
+                                    li.menu-list__item
+                                        a(href="bounceOutLeft").menu-list__item-a bounceOutLeft
+                                    li.menu-list__item
+                                        a(href="bounceOutRight").menu-list__item-a bounceOutRight
+                                    li.menu-list__item
+                                        a(href="bounceOutUp").menu-list__item-a bounceOutUp
+  
+                                    li.menu-list__head.theme Fading Entrances
+                                    li.menu-list__item
+                                        a(href="fadeIn").menu-list__item-a fadeIn
+                                    li.menu-list__item
+                                        a(href="fadeInDown").menu-list__item-a fadeInDown
+                                    li.menu-list__item
+                                        a(href="fadeInDownBig").menu-list__item-a fadeInDownBig
+                                    li.menu-list__item
+                                        a(href="fadeInLeft").menu-list__item-a fadeInLeft
+                                    li.menu-list__item
+                                        a(href="fadeInLeftBig").menu-list__item-a fadeInLeftBig
+                                    li.menu-list__item
+                                        a(href="fadeInRight").menu-list__item-a fadeInRight
+                                    li.menu-list__item
+                                        a(href="fadeInRightBig").menu-list__item-a fadeInRightBig
+                                    li.menu-list__item
+                                        a(href="fadeInUp").menu-list__item-a fadeInUp
+                                    li.menu-list__item
+                                        a(href="fadeInUpBig").menu-list__item-a fadeInUpBig
+  
+                                    li.menu-list__head.theme Fading Exits
+                                    li.menu-list__item
+                                        a(href="fadeOut").menu-list__item-a fadeOut
+                                    li.menu-list__item
+                                        a(href="fadeOutDown").menu-list__item-a fadeOutDown
+                                    li.menu-list__item
+                                        a(href="fadeOutDownBig").menu-list__item-a fadeOutDownBig
+                                    li.menu-list__item
+                                        a(href="fadeOutLeft").menu-list__item-a fadeOutLeft
+                                    li.menu-list__item
+                                        a(href="fadeOutLeftBig").menu-list__item-a fadeOutLeftBig
+                                    li.menu-list__item
+                                        a(href="fadeOutRight").menu-list__item-a fadeOutRight
+                                    li.menu-list__item
+                                        a(href="fadeOutRightBig").menu-list__item-a fadeOutRightBig
+                                    li.menu-list__item
+                                        a(href="fadeOutUp").menu-list__item-a fadeOutUp
+                                    li.menu-list__item
+                                        a(href="fadeOutUpBig").menu-list__item-a fadeOutUpBig
+  
+                                    li.menu-list__head.theme Flippers
+                                    li.menu-list__item
+                                        a(href="flip").menu-list__item-a flip
+                                    li.menu-list__item
+                                        a(href="flipInY").menu-list__item-a flipInY
+                                    li.menu-list__item
+                                        a(href="flipInX").menu-list__item-a flipInX
+                                    li.menu-list__item
+                                        a(href="flipOutY").menu-list__item-a flipOutY
+                                    li.menu-list__item
+                                        a(href="flipOutX").menu-list__item-a flipOutX
+  
+                                    li.menu-list__head.theme Lightspeed
+                                    li.menu-list__item
+                                        a(href="lightSpeedIn").menu-list__item-a lightSpeedIn
+                                    li.menu-list__item
+                                        a(href="lightSpeedOut").menu-list__item-a lightSpeedOut
+  
+                                    li.menu-list__head.theme Rotating Entrances
+                                    li.menu-list__item
+                                        a(href="rotateIn").menu-list__item-a rotateIn
+                                    li.menu-list__item
+                                        a(href="rotateInDownLeft").menu-list__item-a rotateInDownLeft
+                                    li.menu-list__item
+                                        a(href="rotateInDownRight").menu-list__item-a rotateInDownRight
+                                    li.menu-list__item
+                                        a(href="rotateInUpLeft").menu-list__item-a rotateInUpLeft
+                                    li.menu-list__item
+                                        a(href="rotateInUpRight").menu-list__item-a rotateInUpRight
+  
+                                    li.menu-list__head.theme Rotating Exits
+                                    li.menu-list__item
+                                        a(href="rotateOut").menu-list__item-a rotateOut
+                                    li.menu-list__item
+                                        a(href="rotateOutDownLeft").menu-list__item-a rotateOutDownLeft
+                                    li.menu-list__item
+                                        a(href="rotateOutDownRight").menu-list__item-a rotateOutDownRight
+                                    li.menu-list__item
+                                        a(href="rotateOutUpLeft").menu-list__item-a rotateOutUpLeft
+                                    li.menu-list__item
+                                        a(href="rotateOutUpRight").menu-list__item-a rotateOutUpRight
+  
+                                    li.menu-list__head.theme Sliding Entrances
+                                    li.menu-list__item
+                                        a(href="slideInUp").menu-list__item-a slideInUp
+                                    li.menu-list__item
+                                        a(href="slideInDown").menu-list__item-a slideInDown
+                                    li.menu-list__item
+                                        a(href="slideInLeft").menu-list__item-a slideInLeft
+                                    li.menu-list__item
+                                        a(href="slideInRight").menu-list__item-a slideInRight
+  
+                                    li.menu-list__head.theme Sliding Exits
+                                    li.menu-list__item
+                                        a(href="slideOutUp").menu-list__item-a slideOutUp
+                                    li.menu-list__item
+                                        a(href="slideOutDown").menu-list__item-a slideOutDown
+                                    li.menu-list__item
+                                        a(href="slideOutLeft").menu-list__item-a slideOutLeft
+                                    li.menu-list__item
+                                        a(href="slideOutRight").menu-list__item-a slideOutRight
+  
+                                    li.menu-list__head.theme Zoom Entrances
+                                    li.menu-list__item
+                                        a(href="zoomIn").menu-list__item-a zoomIn
+                                    li.menu-list__item
+                                        a(href="zoomInDown").menu-list__item-a zoomInDown
+                                    li.menu-list__item
+                                        a(href="zoomInLeft").menu-list__item-a zoomInLeft
+                                    li.menu-list__item
+                                        a(href="zoomInRight").menu-list__item-a zoomInRight
+                                    li.menu-list__item
+                                        a(href="zoomInUp").menu-list__item-a zoomInUp
+  
+                                    li.menu-list__head.theme Zoom Exits
+                                    li.menu-list__item
+                                        a(href="zoomOut").menu-list__item-a zoomOut
+                                    li.menu-list__item
+                                        a(href="zoomOutDown").menu-list__item-a zoomOutDown
+                                    li.menu-list__item
+                                        a(href="zoomOutLeft").menu-list__item-a zoomOutLeft
+                                    li.menu-list__item
+                                        a(href="zoomOutRight").menu-list__item-a zoomOutRight
+                                    li.menu-list__item
+                                        a(href="zoomOutUp").menu-list__item-a zoomOutUp
+  
+                                    li.menu-list__head.theme Specials
+                                    li.menu-list__item
+                                        a(href="hinge").menu-list__item-a hinge
+                                    li.menu-list__item
+                                        a(href="rollIn").menu-list__item-a rollIn
+                                    li.menu-list__item
+                                        a(href="rollOut").menu-list__item-a rollOut
+                                    li.menu-list__item
+                                        a(href="bounce").menu-list__item-a bounce
+                                    li.menu-list__item
+                                        a(href="flash").menu-list__item-a flash
+                                    li.menu-list__item
+                                        a(href="pulse").menu-list__item-a pulse
+                                    li.menu-list__item
+                                        a(href="rubberBand").menu-list__item-a rubberBand
+                                    li.menu-list__item
+                                        a(href="shake").menu-list__item-a shake
+                                    li.menu-list__item
+                                        a(href="swing").menu-list__item-a swing
+                                    li.menu-list__item
+                                        a(href="tada").menu-list__item-a tada
+                                    li.menu-list__item
+                                        a(href="wobble").menu-list__item-a wobble
+                                    li.menu-list__item
+                                        a(href="jello").menu-list__item-a jello
+  
+  
+                        div.animate__wrap-container__animation-desc
+                            p.animate__wrap-container__animation-desc-txt Selecciona un efecto de animación del menú para animar nuestro emoji...
+  
+            div(href="#test-form-animate").popup-with-form.button-container
+                p.button.wow.pulse Iniciar
+  
+            form(method="POST" action="http://localhost:3000/auth/signin")#test-form-animate.mfp-hide.form
+                i(title="agregar usuario" href="#addUserAnimate").popup-with-form.fa.fa-user-plus.theme
+                h3.form__h3.theme Animate.CSS
+                fieldset.form__field
+                    ol.form__field-ol
+                        li
+                            label(for="username").theme usuario:
+                            input(name="username" type="text" placeholder="mi_usuario" required autocomplete="off")#name.theme
+                        li
+                            label(for="password").theme contraseña:
+                            input(name="password" type="password" placeholder="mi_password" required autocomplete="off")#password.theme
+                        li
+                            button(type="submit").btn-form Entrar
+  
+            form(method="POST" action="http://localhost:3000/index")#addUserAnimate.mfp-hide.form
+                i(title="regresar" href="#test-form-animate")#back.popup-with-form.fa.fa-arrow-left.theme
+                h3.form__h3.theme Nuevo Usuario
+                fieldset.form__field
+                    ol.form__field-ol
+                        li
+                            label(for="user").theme usuario:
+                            input(name="new_user" type="text" placeholder="mi_usuario" required autocomplete="off" title="nombre de usuario(máximo 20 caracteres)")#name.theme
+                        li
+                            label(for="password").theme contraseña:
+                            input(name="new_password" type="password" placeholder="mi_password" required autocomplete="off" title="contraseña(máximo 10 caracteres)")#password.theme
+                        li
+                            button(type="submit").btn-form Guardar
+  
+  
+    //-FAQ
+    section#faq.faq
+        div.center
+            div.title.wow.rubberBand
+                div.title-container
+                    h2 FAQ
+                    p.desc Preguntas más frecuentes
+                    span.underline
+  
+            div.faq__wrap
+                div.faq__wrap-container
+                    div.faq__wrap-container__itemCont
+  
+                        div(data-wow-duration="1.5s").faq__wrap-container__itemCont-item.wow.zoomInLeft
+                            div.faq__wrap-container__itemCont-item-icon
+                                div.faq__wrap-container__itemCont-item-icon_cont
+                                    +pic("faq","png")
+                            div.faq__wrap-container__itemCont-item-desc
+                                div.faq__wrap-container__itemCont-item-desc_quest
+                                    h3.faq__wrap-container__itemCont-item-desc_quest-h3.theme Qué es FD?
+                                div.faq__wrap-container__itemCont-item-desc_answ
+                                    p.faq__wrap-container__itemCont-item-desc_answ-p Es un sitio web pensado en desarrolladores aprendices de frameworks de JavaScript y CSS3. Por ello tenemos contenido ejemplificado y tutoriales simples y efectivos para aprenderlos. Y eso no es todo, también cuenta con un foro de dudas y comentarios para complementar el aprendizaje.
+  
+                        div(data-wow-duration="1.5s").faq__wrap-container__itemCont-item.wow.zoomInRight
+                            div.faq__wrap-container__itemCont-item-icon
+                                div.faq__wrap-container__itemCont-item-icon_cont
+                                    +pic("faq","png")
+                            div.faq__wrap-container__itemCont-item-desc
+                                div.faq__wrap-container__itemCont-item-desc_quest
+                                    h3.faq__wrap-container__itemCont-item-desc_quest-h3.theme Porqué ver FD?
+                                div.faq__wrap-container__itemCont-item-desc_answ
+                                    p.faq__wrap-container__itemCont-item-desc_answ-p Porque no sólo te enseña a usar herramientas de desarrollo, sino también en nuestra página principal hacemos uso de ellos para que te des una idea de como pueden lucir tus sitios.
+  
+                    div.faq__wrap-container__itemCont
+  
+                        div(data-wow-duration="1.5s").faq__wrap-container__itemCont-item.wow.zoomInLeft
+                            div.faq__wrap-container__itemCont-item-icon
+                                div.faq__wrap-container__itemCont-item-icon_cont
+                                    +pic("faq","png")
+                            div.faq__wrap-container__itemCont-item-desc
+                                div.faq__wrap-container__itemCont-item-desc_quest
+                                    h3.faq__wrap-container__itemCont-item-desc_quest-h3.theme Cuántos tutoriales tienen?
+                                div.faq__wrap-container__itemCont-item-desc_answ
+                                    p.faq__wrap-container__itemCont-item-desc_answ-p Son siete temas de aprendizaje(wow.js, owl-carousel, magnific-popup, JQuery, bootstrap, countTo y animate.css) con ejemplos aplicados y código ejemplo.
+  
+                        div(data-wow-duration="1.5s").faq__wrap-container__itemCont-item.wow.zoomInRight
+                            div.faq__wrap-container__itemCont-item-icon
+                                div.faq__wrap-container__itemCont-item-icon_cont
+                                    +pic("faq","png")
+                            div.faq__wrap-container__itemCont-item-desc
+                                div.faq__wrap-container__itemCont-item-desc_quest
+                                    h3.faq__wrap-container__itemCont-item-desc_quest-h3.theme Es seguro usar FD?
+                                div.faq__wrap-container__itemCont-item-desc_answ
+                                    p.faq__wrap-container__itemCont-item-desc_answ-p Totalmente, nuestra información está basada en la documentación de cada uno de éstas librerías, y tus dudas podrás dejarnoslas en el buzón de comentarios.
+  
+                    div.faq__wrap-container__itemCont
+  
+                        div(data-wow-duration="1.5s").faq__wrap-container__itemCont-item.wow.zoomInLeft
+                            div.faq__wrap-container__itemCont-item-icon
+                                div.faq__wrap-container__itemCont-item-icon_cont
+                                    +pic("faq","png")
+                            div.faq__wrap-container__itemCont-item-desc
+                                div.faq__wrap-container__itemCont-item-desc_quest
+                                    h3.faq__wrap-container__itemCont-item-desc_quest-h3.theme Cuándo puedo usar FD?
+                                div.faq__wrap-container__itemCont-item-desc_answ
+                                    p.faq__wrap-container__itemCont-item-desc_answ-p Cada vez que lo requieras, pero principalmente al crear aplicaciones modernas y animadas.
+  
+                        div(data-wow-duration="1.5s").faq__wrap-container__itemCont-item.wow.zoomInRight
+                            div.faq__wrap-container__itemCont-item-icon
+                                div.faq__wrap-container__itemCont-item-icon_cont
+                                    +pic("faq","png")
+                            div.faq__wrap-container__itemCont-item-desc
+                                div.faq__wrap-container__itemCont-item-desc_quest
+                                    h3.faq__wrap-container__itemCont-item-desc_quest-h3.theme License & Copyright
+                                div.faq__wrap-container__itemCont-item-desc_answ
+                                    p.faq__wrap-container__itemCont-item-desc_answ-p Contamos con una extensión de derechos de autor de cada una de las librerías citadas, por lo cuál te garantiza que la información obtenido de nuestro sitio te será benéfica y segura.
+  
+  
+    //-FOOTER
+    section#footer.footer
+        div.center
+            div.footer__wrap
+                div.footer__wrap-container
+                    div.footer__wrap-container-imgF
+                    div.footer__wrap-container-desc
+                        p.footer__wrap-container-desc--p José Francisco Valencia Gasca
+                        p.footer__wrap-container-desc--p Ing. Telemática
+                        p.footer__wrap-container-desc--p Desarrollador de Software
+                        p.footer__wrap-container-desc--p 5 años de experiencia
+                        p.footer__wrap-container-desc--p panchojfvg11@gmail.com
+                div.footer__wrap-container
+                    div.footer__wrap-container-about
+                        h3.footer__wrap-container-about--h3 Conócenos
+                    div.footer__wrap-container-txt
+                        p.footer__wrap-container-txt--p Sómos un equipo de trabajo consolidado y caracterizado por nuestro desempeño y entrega, con capacidades y habilidades significativas en nuestra área, respaldados por años de experiencia.
+                    div.footer__wrap-container-social
+                        h4.footer__wrap-container-social--h4 Social:
+                        i.fa.fa-whatsapp
+                        i.fa.fa-facebook
+                        i.fa.fa-pinterest
+                        i.fa.fa-skype
+                        i.fa.fa-twitter
+                div.footer__wrap-container
+                    div.footer__wrap-container-imgD
+                    div.footer__wrap-container-desc
+                        p.footer__wrap-container-desc--p Derian Martín Pinto Cortés
+                        p.footer__wrap-container-desc--p Ing. Telemática
+                        p.footer__wrap-container-desc--p Desarrollador de Software
+                        p.footer__wrap-container-desc--p 5 años de experiencia
+                        p.footer__wrap-container-desc--p derianpinto@gmail.com
+  
+    //-Copyright
+    section.copyright
+        div.center
+            div.copyright__wrap
+                div.copyright__wrap-cont
+                    p#minilogo.copyright__wrap-cont_logo FD
+                div.copyright__wrap-cont
+                    p.copyright__wrap-cont_copy Copyright © 2016

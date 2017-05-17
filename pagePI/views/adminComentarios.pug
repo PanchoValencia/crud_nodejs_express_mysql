@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+html(lang="es")
+head
+    meta(charset="UTF-8")
+    link(rel='stylesheet' type='text/css' href='/stylesheets/style.css')
+    link(rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css")
+    link(rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js")
+    script(src="/node_modules/bootstrap/dist/js/bootstrap.min.js")
+    script(src="/node_modules/jquery/dist/jquery.min.js")
+    script(src="/javascripts/adminComment.js")
+    title Programación en Internet
+    body
+        nav.navbar.navbar-inverse
+            div.container-fluid
+                div.navbar-header
+                    p.navbar-brand FD
+                ul.nav.navbar-nav.navbar-right
+                    li
+                        a(href="http://localhost:3000/foro") Regresar
+                            span(style='margin-left: 10px').fa.fa-home
+                            
+        
+    if comment.length                    
+        div.table-responsive.col-md-10.col-md-offset-1   
+            
+            br
+                
+            table.table.table-bordered
+                thead
+                    tr.info
+                        th
+                        th
+                        th Comentario
+                        th Fecha de creación
+                tbody
+                - var i = 0;
+                while i < comment.length
+                    tr
+                        - var cod = comment[i].cod_comentarios
+                        td
+                            form(class="form-inline" action="http://localhost:3000/deleteComent" method='post')
+                                input(type="number" class="form-control oculto" min='0' placeholder="Inserta el código" name="codigo" value=`${cod}`)
+                                button(type='submit' class='btn btn-default btn-block') Eliminar
+                        td
+                            form(class="form-inline" action="http://localhost:3000/updateComent" method='post' id='actualizar')
+                                input(type="number" class="form-control oculto" min='0' placeholder="Inserta el código" name="codigoUp" value=`${cod}`)
+                                
+                                button(type='submit' class='btn btn-default btn-block') Actualizar 
+                                td
+                                    textarea(style='width : 100% ' name='updComent')= comment[i].comentario 
+                        td= comment[i].fecha      
+                                
+                    - i ++;
+    else
+        div.alert.alert-info.col-md-4.col-md-offset-4
+            a(class="close" data-dismiss="alert" aria-label="close") ×
+            b Lo sentimos
+                p.alert-info No tienes ningún comentario para mostrar!! :(
